@@ -19,6 +19,8 @@ namespace ManagePatientServices.Models
             DbPath = System.IO.Path.Join(path, "patients.db");
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite($"Data Source={DbPath}");
+        {
+            options.UseSqlite($"Data Source={DbPath}");
+        }
     }
 }
